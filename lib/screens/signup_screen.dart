@@ -8,6 +8,23 @@ class SignupDemo extends StatefulWidget {
 }
 
 class _SignupDemoState extends State<SignupDemo> {
+  late final TextEditingController _email;
+  late final TextEditingController _password;
+
+  @override
+  void initState() {
+    _email = TextEditingController();
+    _password = TextEditingController();
+    super.initState();
+  }
+
+  @override
+  void dispose() {
+    _email = TextEditingController();
+    _password = TextEditingController();
+    super.dispose();
+  }
+
   @override
   Widget build(BuildContext context) {
     return Stack(
@@ -106,20 +123,24 @@ class _SignupDemoState extends State<SignupDemo> {
                   padding:
                       const EdgeInsets.symmetric(vertical: 2, horizontal: 60),
                   child: Row(
-                    children: const [
-                      Icon(
+                    children: [
+                      const Icon(
                         Icons.mail,
                         color: Colors.white,
                         size: 24.0,
                       ),
-                      SizedBox(
+                      const SizedBox(
                         width: 10,
                       ),
                       SizedBox(
                         height: 40,
                         width: 230.0,
                         child: TextField(
-                          decoration: InputDecoration(
+                          controller: _email,
+                          enableSuggestions: false,
+                          autocorrect: false,
+                          keyboardType: TextInputType.emailAddress,
+                          decoration: const InputDecoration(
                               labelText: 'Email Id',
                               hintText: 'enter your email id',
                               enabledBorder: UnderlineInputBorder(
@@ -136,7 +157,7 @@ class _SignupDemoState extends State<SignupDemo> {
                               contentPadding: EdgeInsets.only(
                                 bottom: 0, // HERE THE IMPORTANT PART
                               )),
-                          style: TextStyle(
+                          style: const TextStyle(
                               fontSize: 12.0, height: 1, color: Colors.white),
                         ),
                       ),
@@ -148,20 +169,24 @@ class _SignupDemoState extends State<SignupDemo> {
                   padding:
                       const EdgeInsets.symmetric(vertical: 2, horizontal: 60),
                   child: Row(
-                    children: const [
-                      Icon(
+                    children: [
+                      const Icon(
                         Icons.lock,
                         color: Colors.white,
                         size: 24.0,
                       ),
-                      SizedBox(
+                      const SizedBox(
                         width: 10,
                       ),
                       SizedBox(
                         height: 40,
                         width: 230.0,
                         child: TextField(
-                          decoration: InputDecoration(
+                          controller: _password,
+                          enableSuggestions: false,
+                          autocorrect: false,
+                          obscureText: true,
+                          decoration: const InputDecoration(
                               labelText: 'Password',
                               hintText: 'enter password',
                               enabledBorder: UnderlineInputBorder(
@@ -178,7 +203,7 @@ class _SignupDemoState extends State<SignupDemo> {
                               contentPadding: EdgeInsets.only(
                                 bottom: 0, // HERE THE IMPORTANT PART
                               )),
-                          style: TextStyle(
+                          style: const TextStyle(
                               fontSize: 12.0, height: 1, color: Colors.white),
                         ),
                       ),
@@ -203,6 +228,9 @@ class _SignupDemoState extends State<SignupDemo> {
                         height: 40,
                         width: 230.0,
                         child: TextField(
+                          enableSuggestions: false,
+                          autocorrect: false,
+                          obscureText: true,
                           decoration: InputDecoration(
                               labelText: 'Confirm Password',
                               hintText: 're-enter password',

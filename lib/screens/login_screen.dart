@@ -8,6 +8,23 @@ class LoginDemo extends StatefulWidget {
 }
 
 class _LoginDemoState extends State<LoginDemo> {
+  late final TextEditingController _email;
+  late final TextEditingController _password;
+
+  @override
+  void initState() {
+    _email = TextEditingController();
+    _password = TextEditingController();
+    super.initState();
+  }
+
+  @override
+  void dispose() {
+    _email = TextEditingController();
+    _password = TextEditingController();
+    super.dispose();
+  }
+
   @override
   Widget build(BuildContext context) {
     return Stack(
@@ -64,20 +81,24 @@ class _LoginDemoState extends State<LoginDemo> {
                   padding:
                       const EdgeInsets.symmetric(vertical: 2, horizontal: 60),
                   child: Row(
-                    children: const [
-                      Icon(
+                    children: [
+                      const Icon(
                         Icons.person,
                         color: Colors.white,
                         size: 24.0,
                       ),
-                      SizedBox(
+                      const SizedBox(
                         width: 10,
                       ),
                       SizedBox(
                         height: 40,
                         width: 230.0,
                         child: TextField(
-                          decoration: InputDecoration(
+                          controller: _email,
+                          enableSuggestions: false,
+                          autocorrect: false,
+                          keyboardType: TextInputType.emailAddress,
+                          decoration: const InputDecoration(
                               labelText: 'Email Id',
                               hintText: 'enter your email id',
                               enabledBorder: UnderlineInputBorder(
@@ -94,7 +115,7 @@ class _LoginDemoState extends State<LoginDemo> {
                               contentPadding: EdgeInsets.only(
                                 bottom: 0, // HERE THE IMPORTANT PART
                               )),
-                          style: TextStyle(
+                          style: const TextStyle(
                               fontSize: 12.0, height: 1, color: Colors.white),
                         ),
                       ),
@@ -106,20 +127,24 @@ class _LoginDemoState extends State<LoginDemo> {
                   padding:
                       const EdgeInsets.symmetric(vertical: 2, horizontal: 60),
                   child: Row(
-                    children: const [
-                      Icon(
+                    children: [
+                      const Icon(
                         Icons.mail,
                         color: Colors.white,
                         size: 24.0,
                       ),
-                      SizedBox(
+                      const SizedBox(
                         width: 10,
                       ),
                       SizedBox(
                         height: 40,
                         width: 230.0,
                         child: TextField(
-                          decoration: InputDecoration(
+                          controller: _password,
+                          enableSuggestions: false,
+                          autocorrect: false,
+                          obscureText: true,
+                          decoration: const InputDecoration(
                               labelText: 'Password',
                               hintText: 'enter your password',
                               enabledBorder: UnderlineInputBorder(
@@ -136,7 +161,7 @@ class _LoginDemoState extends State<LoginDemo> {
                               contentPadding: EdgeInsets.only(
                                 bottom: 0, // HERE THE IMPORTANT PART
                               )),
-                          style: TextStyle(
+                          style: const TextStyle(
                               fontSize: 12.0, height: 1, color: Colors.white),
                         ),
                       ),
