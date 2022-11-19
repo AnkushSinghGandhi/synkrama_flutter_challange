@@ -22,6 +22,17 @@ class _LoginDemoState extends State<LoginDemo> {
           ),
         ),
         Scaffold(
+          appBar: AppBar(
+              backgroundColor: Colors.transparent,
+              automaticallyImplyLeading: false,
+              leading: IconButton(
+                icon: const Icon(
+                  Icons.arrow_back,
+                  color: Colors.white,
+                  size: 47,
+                ),
+                onPressed: () => Navigator.of(context).pop(),
+              )),
           backgroundColor:
               Colors.transparent, // <-- SCAFFOLD WITH TRANSPARENT BG
           body: SingleChildScrollView(
