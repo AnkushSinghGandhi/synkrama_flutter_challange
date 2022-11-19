@@ -52,7 +52,7 @@ class _LoginDemoState extends State<LoginDemo> {
                         color: Colors.red,
                         borderRadius: BorderRadius.circular(50.0)),*/
                       child: const Icon(
-                        Icons.person_add,
+                        Icons.person,
                         color: Colors.white,
                         size: 84.0,
                       ),
