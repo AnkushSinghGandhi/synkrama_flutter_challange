@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "841252918702",
+    "project_id": "synkrama-ea719",
+    "storage_bucket": "synkrama-ea719.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:841252918702:android:995e7a9241e33081c2643f",
+        "android_client_info": {
+          "package_name": "com.synkrama.synkrama"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "841252918702-logh058i1edemspec1d2biicpuafhcm9.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBli_nQCWy8GUkIFoXPjdynCcTXMUo-QNU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "841252918702-logh058i1edemspec1d2biicpuafhcm9.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
