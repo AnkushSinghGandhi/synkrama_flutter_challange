@@ -42,17 +42,6 @@ class _LoginScreenState extends State<LoginScreen> {
           ),
         ),
         Scaffold(
-          appBar: AppBar(
-              backgroundColor: Colors.transparent,
-              automaticallyImplyLeading: false,
-              leading: IconButton(
-                icon: const Icon(
-                  Icons.arrow_back,
-                  color: Colors.white,
-                  size: 47,
-                ),
-                onPressed: () => Navigator.of(context).pop(),
-              )),
           backgroundColor: Colors.transparent,
           body: SingleChildScrollView(
             child: Column(
@@ -193,11 +182,31 @@ class _LoginScreenState extends State<LoginScreen> {
                           Navigator.pushNamed(context, homeRoute);
                         }
                       } catch (e) {
+                        // ignore: avoid_print
                         print(e);
                       }
                     },
                     child: const Text(
                       'Login',
+                      style: TextStyle(color: Colors.white, fontSize: 18),
+                    ),
+                  ),
+                ),
+                const SizedBox(
+                  height: 30,
+                ),
+                Container(
+                  height: 40,
+                  width: 200,
+                  decoration: BoxDecoration(
+                      color: Colors.blue,
+                      borderRadius: BorderRadius.circular(50)),
+                  child: TextButton(
+                    onPressed: () {
+                      Navigator.pushNamed(context, signupRoute);
+                    },
+                    child: const Text(
+                      'Signup',
                       style: TextStyle(color: Colors.white, fontSize: 18),
                     ),
                   ),
