@@ -57,7 +57,7 @@ class _SignupScreenState extends State<SignupScreen> {
             child: Column(
               children: <Widget>[
                 const SizedBox(
-                  height: 70,
+                  height: 10,
                 ),
                 Padding(
                   padding: const EdgeInsets.only(top: 60.0),
@@ -275,6 +275,7 @@ class _SignupScreenState extends State<SignupScreen> {
                           Navigator.pushNamed(context, homeRoute);
                         }
                       } catch (e) {
+                        // ignore: avoid_print
                         print(e);
                       }
                     },
