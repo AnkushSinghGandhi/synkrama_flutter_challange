@@ -235,6 +235,15 @@ class _HomeScreenState extends State<HomeScreen> {
           left: 0.0,
           right: 0.0,
           child: AppBar(
+            actions: const [
+              Padding(
+                padding: EdgeInsets.all(18.0),
+                child: Icon(
+                  Icons.logo_dev,
+                  size: 35.0,
+                ),
+              ),
+            ],
             leading: IconButton(
               icon: const Icon(
                 Icons.arrow_back,

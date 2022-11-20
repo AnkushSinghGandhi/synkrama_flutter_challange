@@ -43,6 +43,15 @@ class _SignupScreenState extends State<SignupScreen> {
         ),
         Scaffold(
           appBar: AppBar(
+              actions: const [
+                Padding(
+                  padding: EdgeInsets.all(18.0),
+                  child: Icon(
+                    Icons.logo_dev,
+                    size: 35.0,
+                  ),
+                ),
+              ],
               backgroundColor: Colors.transparent,
               automaticallyImplyLeading: false,
               leading: IconButton(

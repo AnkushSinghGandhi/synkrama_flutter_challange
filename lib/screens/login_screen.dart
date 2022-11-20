@@ -43,6 +43,18 @@ class _LoginScreenState extends State<LoginScreen> {
           ),
         ),
         Scaffold(
+          appBar: AppBar(
+            actions: const [
+              Padding(
+                padding: EdgeInsets.all(18.0),
+                child: Icon(
+                  Icons.logo_dev,
+                  size: 35.0,
+                ),
+              ),
+            ],
+            backgroundColor: Colors.transparent,
+          ),
           backgroundColor: Colors.transparent,
           body: SingleChildScrollView(
             child: Column(
