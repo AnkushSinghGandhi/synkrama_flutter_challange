@@ -70,7 +70,7 @@ class _LoginScreenState extends State<LoginScreen> {
                 ),
                 Padding(
                   padding:
-                      const EdgeInsets.symmetric(vertical: 2, horizontal: 60),
+                      const EdgeInsets.symmetric(vertical: 2, horizontal: 35),
                   child: Row(
                     children: [
                       const Icon(
@@ -115,7 +115,7 @@ class _LoginScreenState extends State<LoginScreen> {
                 ),
                 Padding(
                   padding:
-                      const EdgeInsets.symmetric(vertical: 2, horizontal: 60),
+                      const EdgeInsets.symmetric(vertical: 2, horizontal: 35),
                   child: Row(
                     children: [
                       const Icon(

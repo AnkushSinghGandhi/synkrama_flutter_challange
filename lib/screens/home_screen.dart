@@ -104,9 +104,12 @@ class _HomeScreenState extends State<HomeScreen> {
                   SizedBox(
                     width: 10,
                   ),
-                  Text(
-                    'Lie on your side',
-                    style: TextStyle(color: Color.fromARGB(169, 255, 255, 255)),
+                  Flexible(
+                    child: Text(
+                      'Lie on your side',
+                      style:
+                          TextStyle(color: Color.fromARGB(169, 255, 255, 255)),
+                    ),
                   ),
                 ]),
               ),
@@ -124,9 +127,12 @@ class _HomeScreenState extends State<HomeScreen> {
                   SizedBox(
                     width: 10,
                   ),
-                  Text(
-                    'Arm positioned 90 to the chest and elbow bent to 90',
-                    style: TextStyle(color: Color.fromARGB(169, 255, 255, 255)),
+                  Flexible(
+                    child: Text(
+                      'Arm positioned 90 to the chest and elbow bent to 90',
+                      style:
+                          TextStyle(color: Color.fromARGB(169, 255, 255, 255)),
+                    ),
                   ),
                 ]),
               ),
@@ -144,9 +150,12 @@ class _HomeScreenState extends State<HomeScreen> {
                   SizedBox(
                     width: 10,
                   ),
-                  Text(
-                    'Keep your shoulder on the ground',
-                    style: TextStyle(color: Color.fromARGB(169, 255, 255, 255)),
+                  Flexible(
+                    child: Text(
+                      'Keep your shoulder on the ground',
+                      style:
+                          TextStyle(color: Color.fromARGB(169, 255, 255, 255)),
+                    ),
                   ),
                 ]),
               ),
@@ -164,9 +173,12 @@ class _HomeScreenState extends State<HomeScreen> {
                   SizedBox(
                     width: 10,
                   ),
-                  Text(
-                    'Lifting your shoulder of the ground',
-                    style: TextStyle(color: Color.fromARGB(169, 255, 255, 255)),
+                  Flexible(
+                    child: Text(
+                      'Lifting your shoulder of the ground',
+                      style:
+                          TextStyle(color: Color.fromARGB(169, 255, 255, 255)),
+                    ),
                   ),
                 ]),
               ),
@@ -184,9 +196,12 @@ class _HomeScreenState extends State<HomeScreen> {
                   SizedBox(
                     width: 10,
                   ),
-                  Text(
-                    'Place your hand and wrist on the floor',
-                    style: TextStyle(color: Color.fromARGB(169, 255, 255, 255)),
+                  Flexible(
+                    child: Text(
+                      'Place your hand and wrist on the floor',
+                      style:
+                          TextStyle(color: Color.fromARGB(169, 255, 255, 255)),
+                    ),
                   ),
                 ]),
               ),
