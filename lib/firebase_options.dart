@@ -53,8 +53,8 @@ class DefaultFirebaseOptions {
   }
 
   static const FirebaseOptions android = FirebaseOptions(
-    apiKey: 'AIzaSyBli_nQCWy8GUkIFoXPjdynCcTXMUo-QNU',
-    appId: '1:841252918702:android:995e7a9241e33081c2643f',
+    apiKey: ${{ secrets.APIKEY }},
+    appId: ${{ secrets.APPID }},
     messagingSenderId: '841252918702',
     projectId: 'synkrama-ea719',
     storageBucket: 'synkrama-ea719.appspot.com',
