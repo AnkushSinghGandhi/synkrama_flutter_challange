@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:synkrama/screens/Landscape_screen.dart';
 import 'package:synkrama/screens/home_screen.dart';
 import 'package:synkrama/screens/signup_screen.dart';
 import 'package:synkrama/screens/login_screen.dart';
@@ -20,6 +21,7 @@ class MyApp extends StatelessWidget {
         loginRoute: (context) => const LoginDemo(),
         signupRoute: (context) => const SignupDemo(),
         homeRoute: (context) => const HomeScreen(),
+        landscapeViewRoute: (context) => const LandscapeView(),
       },
     );
   }
