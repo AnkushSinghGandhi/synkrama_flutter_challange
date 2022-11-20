@@ -55,6 +55,7 @@ class _LandscapeViewState extends State<LandscapeView> {
                   size: 47,
                 ),
                 onPressed: () {
+                  setPortrait();
                   Navigator.pushNamed(
                     context,
                     homeRoute,
@@ -73,6 +74,13 @@ Future setLandscape() async {
   await SystemChrome.setPreferredOrientations([
     DeviceOrientation.landscapeLeft,
     DeviceOrientation.landscapeRight,
+  ]);
+}
+
+Future setPortrait() async {
+  await SystemChrome.setPreferredOrientations([
+    DeviceOrientation.portraitDown,
+    DeviceOrientation.portraitUp,
   ]);
 }
 
