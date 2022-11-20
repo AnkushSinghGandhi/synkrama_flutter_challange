@@ -1,6 +1,7 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
+import 'package:synkrama/utilities/error_dialogue.dart';
 
 import '../constants/routes.dart';
 
@@ -180,10 +181,34 @@ class _LoginScreenState extends State<LoginScreen> {
                         if (user != null) {
                           // ignore: use_build_context_synchronously
                           Navigator.pushNamed(context, homeRoute);
+                        } else {
+                          await showErrorDialog(
+                            (context),
+                            'User not logged in',
+                          );
                         }
-                      } catch (e) {
-                        // ignore: avoid_print
-                        print(e);
+                      } on FirebaseAuthException catch (e) {
+                        if (e.code == 'user-not-found') {
+                          await showErrorDialog(
+                            (context),
+                            'User not found!',
+                          );
+                        } else if (e.code == 'wrong-password') {
+                          await showErrorDialog(
+                            (context),
+                            'Wrong Password',
+                          );
+                        } else {
+                          await showErrorDialog(
+                            (context),
+                            'Something went wrong',
+                          );
+                        }
+                      } catch (_) {
+                        await showErrorDialog(
+                          (context),
+                          'Something went wrong',
+                        );
                       }
                     },
                     child: const Text(

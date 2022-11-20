@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:synkrama/constants/routes.dart';
 import 'package:firebase_core/firebase_core.dart';
+import 'package:synkrama/utilities/error_dialogue.dart';
 
 class SignupScreen extends StatefulWidget {
   const SignupScreen({super.key});
@@ -273,10 +274,39 @@ class _SignupScreenState extends State<SignupScreen> {
                         if (user != null) {
                           // ignore: use_build_context_synchronously
                           Navigator.pushNamed(context, homeRoute);
+                        } else {
+                          await showErrorDialog(
+                            (context),
+                            'User not logged in',
+                          );
                         }
-                      } catch (e) {
-                        // ignore: avoid_print
-                        print(e);
+                      } on FirebaseAuthException catch (e) {
+                        if (e.code == 'week-password') {
+                          await showErrorDialog(
+                            (context),
+                            'week password',
+                          );
+                        } else if (e.code == 'email-already-in-use') {
+                          await showErrorDialog(
+                            (context),
+                            'email already in use',
+                          );
+                        } else if (e.code == 'invalid-email') {
+                          await showErrorDialog(
+                            (context),
+                            'Invalid email!',
+                          );
+                        } else {
+                          await showErrorDialog(
+                            (context),
+                            'something went wrong',
+                          );
+                        }
+                      } catch (_) {
+                        await showErrorDialog(
+                          (context),
+                          'something went wrong!',
+                        );
                       }
                     },
                     child: const Text(
