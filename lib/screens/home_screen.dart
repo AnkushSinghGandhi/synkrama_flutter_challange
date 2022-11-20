@@ -52,7 +52,12 @@ class _HomeScreenState extends State<HomeScreen> {
                     color: Colors.blue,
                     borderRadius: BorderRadius.circular(50)),
                 child: TextButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.pushNamed(
+                      context,
+                      landscapeViewRoute,
+                    );
+                  },
                   child: const Text(
                     'Next',
                     style: TextStyle(color: Colors.white, fontSize: 18),
