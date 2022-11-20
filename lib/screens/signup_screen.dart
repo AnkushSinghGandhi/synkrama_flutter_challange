@@ -3,14 +3,14 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:synkrama/constants/routes.dart';
 import 'package:firebase_core/firebase_core.dart';
 
-class SignupDemo extends StatefulWidget {
-  const SignupDemo({super.key});
+class SignupScreen extends StatefulWidget {
+  const SignupScreen({super.key});
 
   @override
-  State<SignupDemo> createState() => _SignupDemoState();
+  State<SignupScreen> createState() => _SignupScreenState();
 }
 
-class _SignupDemoState extends State<SignupDemo> {
+class _SignupScreenState extends State<SignupScreen> {
   late final TextEditingController _email;
   late final TextEditingController _password;
 
@@ -31,12 +31,11 @@ class _SignupDemoState extends State<SignupDemo> {
   @override
   Widget build(BuildContext context) {
     return Stack(
-      // <-- STACK AS THE SCAFFOLD PARENT
       children: [
         Container(
           decoration: const BoxDecoration(
             image: DecorationImage(
-              image: AssetImage("assets/bg.png"), // <-- BACKGROUND IMAGE
+              image: AssetImage("assets/bg.png"),
               fit: BoxFit.cover,
             ),
           ),
@@ -53,8 +52,7 @@ class _SignupDemoState extends State<SignupDemo> {
                 ),
                 onPressed: () => Navigator.of(context).pop(),
               )),
-          backgroundColor:
-              Colors.transparent, // <-- SCAFFOLD WITH TRANSPARENT BG
+          backgroundColor: Colors.transparent,
           body: SingleChildScrollView(
             child: Column(
               children: <Widget>[
@@ -68,9 +66,6 @@ class _SignupDemoState extends State<SignupDemo> {
                     child: Container(
                       width: 200,
                       height: 150,
-                      /*decoration: BoxDecoration(
-                        color: Colors.red,
-                        borderRadius: BorderRadius.circular(50.0)),*/
                       child: const Icon(
                         Icons.person_add,
                         color: Colors.white,
@@ -80,7 +75,6 @@ class _SignupDemoState extends State<SignupDemo> {
                   ),
                 ),
                 Padding(
-                  //padding: const EdgeInsets.only(left:15.0,right: 15.0,top:0,bottom: 0),
                   padding:
                       const EdgeInsets.symmetric(vertical: 2, horizontal: 60),
                   child: Row(
@@ -112,7 +106,7 @@ class _SignupDemoState extends State<SignupDemo> {
                                 color: Color.fromARGB(166, 255, 255, 255),
                               ),
                               contentPadding: EdgeInsets.only(
-                                bottom: 0, // HERE THE IMPORTANT PART
+                                bottom: 0,
                               )),
                           style: TextStyle(
                               fontSize: 12.0, height: 1, color: Colors.white),
@@ -122,7 +116,6 @@ class _SignupDemoState extends State<SignupDemo> {
                   ),
                 ),
                 Padding(
-                  //padding: const EdgeInsets.only(left:15.0,right: 15.0,top:0,bottom: 0),
                   padding:
                       const EdgeInsets.symmetric(vertical: 2, horizontal: 60),
                   child: Row(
@@ -158,7 +151,7 @@ class _SignupDemoState extends State<SignupDemo> {
                                 color: Color.fromARGB(166, 255, 255, 255),
                               ),
                               contentPadding: EdgeInsets.only(
-                                bottom: 0, // HERE THE IMPORTANT PART
+                                bottom: 0,
                               )),
                           style: const TextStyle(
                               fontSize: 12.0, height: 1, color: Colors.white),
@@ -168,7 +161,6 @@ class _SignupDemoState extends State<SignupDemo> {
                   ),
                 ),
                 Padding(
-                  //padding: const EdgeInsets.only(left:15.0,right: 15.0,top:0,bottom: 0),
                   padding:
                       const EdgeInsets.symmetric(vertical: 2, horizontal: 60),
                   child: Row(
@@ -204,7 +196,7 @@ class _SignupDemoState extends State<SignupDemo> {
                                 color: Color.fromARGB(166, 255, 255, 255),
                               ),
                               contentPadding: EdgeInsets.only(
-                                bottom: 0, // HERE THE IMPORTANT PART
+                                bottom: 0,
                               )),
                           style: const TextStyle(
                               fontSize: 12.0, height: 1, color: Colors.white),
@@ -214,7 +206,6 @@ class _SignupDemoState extends State<SignupDemo> {
                   ),
                 ),
                 Padding(
-                  //padding: const EdgeInsets.only(left:15.0,right: 15.0,top:0,bottom: 0),
                   padding:
                       const EdgeInsets.symmetric(vertical: 2, horizontal: 60),
                   child: Row(
@@ -249,7 +240,7 @@ class _SignupDemoState extends State<SignupDemo> {
                                 color: Color.fromARGB(166, 255, 255, 255),
                               ),
                               contentPadding: EdgeInsets.only(
-                                bottom: 0, // HERE THE IMPORTANT PART
+                                bottom: 0,
                               )),
                           style: TextStyle(
                               fontSize: 12.0, height: 1, color: Colors.white),

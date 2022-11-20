@@ -4,14 +4,14 @@ import 'package:flutter/material.dart';
 
 import '../constants/routes.dart';
 
-class LoginDemo extends StatefulWidget {
-  const LoginDemo({super.key});
+class LoginScreen extends StatefulWidget {
+  const LoginScreen({super.key});
 
   @override
-  State<LoginDemo> createState() => _LoginDemoState();
+  State<LoginScreen> createState() => _LoginScreenState();
 }
 
-class _LoginDemoState extends State<LoginDemo> {
+class _LoginScreenState extends State<LoginScreen> {
   late final TextEditingController _email;
   late final TextEditingController _password;
 
@@ -32,12 +32,11 @@ class _LoginDemoState extends State<LoginDemo> {
   @override
   Widget build(BuildContext context) {
     return Stack(
-      // <-- STACK AS THE SCAFFOLD PARENT
       children: [
         Container(
           decoration: const BoxDecoration(
             image: DecorationImage(
-              image: AssetImage("assets/bg.png"), // <-- BACKGROUND IMAGE
+              image: AssetImage("assets/bg.png"),
               fit: BoxFit.cover,
             ),
           ),
@@ -54,8 +53,7 @@ class _LoginDemoState extends State<LoginDemo> {
                 ),
                 onPressed: () => Navigator.of(context).pop(),
               )),
-          backgroundColor:
-              Colors.transparent, // <-- SCAFFOLD WITH TRANSPARENT BG
+          backgroundColor: Colors.transparent,
           body: SingleChildScrollView(
             child: Column(
               children: <Widget>[
@@ -81,7 +79,6 @@ class _LoginDemoState extends State<LoginDemo> {
                   ),
                 ),
                 Padding(
-                  //padding: const EdgeInsets.only(left:15.0,right: 15.0,top:0,bottom: 0),
                   padding:
                       const EdgeInsets.symmetric(vertical: 2, horizontal: 60),
                   child: Row(
@@ -117,7 +114,7 @@ class _LoginDemoState extends State<LoginDemo> {
                                 color: Color.fromARGB(166, 255, 255, 255),
                               ),
                               contentPadding: EdgeInsets.only(
-                                bottom: 0, // HERE THE IMPORTANT PART
+                                bottom: 0,
                               )),
                           style: const TextStyle(
                               fontSize: 12.0, height: 1, color: Colors.white),
@@ -127,7 +124,6 @@ class _LoginDemoState extends State<LoginDemo> {
                   ),
                 ),
                 Padding(
-                  //padding: const EdgeInsets.only(left:15.0,right: 15.0,top:0,bottom: 0),
                   padding:
                       const EdgeInsets.symmetric(vertical: 2, horizontal: 60),
                   child: Row(
@@ -163,7 +159,7 @@ class _LoginDemoState extends State<LoginDemo> {
                                 color: Color.fromARGB(166, 255, 255, 255),
                               ),
                               contentPadding: EdgeInsets.only(
-                                bottom: 0, // HERE THE IMPORTANT PART
+                                bottom: 0,
                               )),
                           style: const TextStyle(
                               fontSize: 12.0, height: 1, color: Colors.white),
