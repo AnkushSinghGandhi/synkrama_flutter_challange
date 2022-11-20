@@ -45,6 +45,154 @@ class _HomeScreenState extends State<HomeScreen> {
               child: Column(
             children: [
               VideoPlayerWidget(controller: controller),
+              const SizedBox(
+                height: 30,
+              ),
+              Row(
+                children: const [
+                  SizedBox(
+                    width: 27,
+                  ),
+                  Text(
+                    'N/n',
+                    style: TextStyle(
+                        color: Color.fromARGB(199, 255, 255, 255),
+                        fontSize: 17),
+                  ),
+                ],
+              ),
+              Row(
+                children: const [
+                  SizedBox(
+                    width: 27,
+                  ),
+                  Text(
+                    'The Compass',
+                    style: TextStyle(
+                      color: Color.fromARGB(255, 255, 255, 255),
+                      fontSize: 21,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                ],
+              ),
+              Row(
+                children: const [
+                  SizedBox(
+                    width: 27,
+                  ),
+                  Text(
+                    'Shoulder internal rotation',
+                    style: TextStyle(color: Color.fromARGB(169, 255, 255, 255)),
+                  ),
+                ],
+              ),
+              const SizedBox(
+                height: 30,
+              ),
+              SizedBox(
+                height: 37,
+                child: Row(children: const [
+                  SizedBox(
+                    width: 27,
+                  ),
+                  Icon(
+                    Icons.check,
+                    color: Colors.green,
+                    size: 24.0,
+                  ),
+                  SizedBox(
+                    width: 10,
+                  ),
+                  Text(
+                    'Lie on your side',
+                    style: TextStyle(color: Color.fromARGB(169, 255, 255, 255)),
+                  ),
+                ]),
+              ),
+              SizedBox(
+                height: 37,
+                child: Row(children: const [
+                  SizedBox(
+                    width: 27,
+                  ),
+                  Icon(
+                    Icons.check,
+                    color: Colors.green,
+                    size: 24.0,
+                  ),
+                  SizedBox(
+                    width: 10,
+                  ),
+                  Text(
+                    'Arm positioned 90 to the chest and elbow bent to 90',
+                    style: TextStyle(color: Color.fromARGB(169, 255, 255, 255)),
+                  ),
+                ]),
+              ),
+              SizedBox(
+                height: 37,
+                child: Row(children: const [
+                  SizedBox(
+                    width: 27,
+                  ),
+                  Icon(
+                    Icons.check,
+                    color: Colors.green,
+                    size: 24.0,
+                  ),
+                  SizedBox(
+                    width: 10,
+                  ),
+                  Text(
+                    'Keep your shoulder on the ground',
+                    style: TextStyle(color: Color.fromARGB(169, 255, 255, 255)),
+                  ),
+                ]),
+              ),
+              SizedBox(
+                height: 37,
+                child: Row(children: const [
+                  SizedBox(
+                    width: 27,
+                  ),
+                  Icon(
+                    Icons.close,
+                    color: Colors.red,
+                    size: 24.0,
+                  ),
+                  SizedBox(
+                    width: 10,
+                  ),
+                  Text(
+                    'Lifting your shoulder of the ground',
+                    style: TextStyle(color: Color.fromARGB(169, 255, 255, 255)),
+                  ),
+                ]),
+              ),
+              SizedBox(
+                height: 37,
+                child: Row(children: const [
+                  SizedBox(
+                    width: 27,
+                  ),
+                  Icon(
+                    Icons.add_circle_outline_sharp,
+                    color: Colors.white,
+                    size: 24.0,
+                  ),
+                  SizedBox(
+                    width: 10,
+                  ),
+                  Text(
+                    'Place your hand and wrist on the floor',
+                    style: TextStyle(color: Color.fromARGB(169, 255, 255, 255)),
+                  ),
+                ]),
+              ),
+              const SizedBox(
+                height: 50,
+              ),
               Container(
                 height: 40,
                 width: 200,
