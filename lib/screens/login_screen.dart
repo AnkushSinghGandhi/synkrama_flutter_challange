@@ -1,4 +1,8 @@
+import 'package:firebase_auth/firebase_auth.dart';
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
+
+import '../constants/routes.dart';
 
 class LoginDemo extends StatefulWidget {
   const LoginDemo({super.key});
@@ -178,7 +182,24 @@ class _LoginDemoState extends State<LoginDemo> {
                       color: Colors.blue,
                       borderRadius: BorderRadius.circular(50)),
                   child: TextButton(
-                    onPressed: () {},
+                    onPressed: () async {
+                      final email = _email.text;
+                      final password = _password.text;
+                      try {
+                        Firebase.initializeApp();
+                        await FirebaseAuth.instance.signInWithEmailAndPassword(
+                          email: email,
+                          password: password,
+                        );
+                        final user = FirebaseAuth.instance.currentUser;
+                        if (user != null) {
+                          // ignore: use_build_context_synchronously
+                          Navigator.pushNamed(context, homeRoute);
+                        }
+                      } catch (e) {
+                        print(e);
+                      }
+                    },
                     child: const Text(
                       'Login',
                       style: TextStyle(color: Colors.white, fontSize: 18),
