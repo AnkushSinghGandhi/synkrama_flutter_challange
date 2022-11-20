@@ -1,4 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:firebase_auth/firebase_auth.dart';
+import 'package:synkrama/firebase_options.dart';
+import 'package:synkrama/constants/routes.dart';
+import 'package:firebase_core/firebase_core.dart';
 
 class SignupDemo extends StatefulWidget {
   const SignupDemo({super.key});
@@ -265,7 +269,25 @@ class _SignupDemoState extends State<SignupDemo> {
                       color: Colors.blue,
                       borderRadius: BorderRadius.circular(50)),
                   child: TextButton(
-                    onPressed: () {},
+                    onPressed: () async {
+                      final email = _email.text;
+                      final password = _password.text;
+                      try {
+                        Firebase.initializeApp();
+                        await FirebaseAuth.instance
+                            .createUserWithEmailAndPassword(
+                          email: email,
+                          password: password,
+                        );
+                        final user = FirebaseAuth.instance.currentUser;
+                        if (user != null) {
+                          // ignore: use_build_context_synchronously
+                          Navigator.pushNamed(context, homeRoute);
+                        }
+                      } catch (e) {
+                        print(e);
+                      }
+                    },
                     child: const Text(
                       'Conntinue',
                       style: TextStyle(color: Colors.white, fontSize: 18),
